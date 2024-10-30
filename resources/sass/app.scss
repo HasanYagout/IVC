@@ -1,0 +1,41 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import  'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+@each $name, $color in $colors {
+    .custom-#{$name} {
+        color: $color!important;
+    }
+    .custom-bg-#{$name} {
+        background-color: $color!important;
+
+    }
+    .custom-border-#{$name} {
+        border-color: $color!important;
+    }
+}
+
+body{
+background-image: url("../../public/assets/images/background.png");
+}
+
+.logo::after {
+    content: '';
+    display: block;
+    border-top: 2px solid #000; /* Adjust thickness and color */
+    width: 100%; /* Adjust width as needed */
+    position: absolute;
+    top: 50%; /* Center vertically if needed */
+    left: 0;
+}
+.me-7{
+   margin-right:17rem;
+}
+.nav-border{
+    width: 90%;
+}
