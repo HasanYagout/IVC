@@ -22,6 +22,8 @@
 
 body{
 background-image: url("../../public/assets/images/background.png");
+    background-size: cover;
+    background-repeat: repeat-y;
 }
 
 .logo::after {

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="{{ app()->getLocale() }}" dir="{{app()->getLocale()=='en'?'ltr':'rtl'}}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +15,7 @@
 <body>
 @include('layout.partials.nav')
 @yield('content')
-
+@include('layout.partials.footer')
 @stack('css_or_js')
 </body>
 </html>

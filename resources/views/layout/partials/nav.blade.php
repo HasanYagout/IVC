@@ -18,26 +18,39 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
             <ul class="navbar-nav align-items-center mb-2 mb-lg-0 bg-white rounded-5 py-2">
                 <li class="nav-item fs-4 mx-5 fw-bold">
-                    <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
+                    <a class="nav-link active" aria-current="page" href="{{route('home')}}">{{__('words.Home')}}</a>
                 </li>
                 <li class="nav-item fs-4 mx-5 fw-bold">
-                    <a class="nav-link" href="{{route('about')}}">About</a>
+                    <a class="nav-link" href="{{route('about')}}">{{__('words.About')}}</a>
                 </li>
                 <li class="nav-item fs-4 mx-5 fw-bold">
-                    <a class="nav-link" href="#">IVC Services</a>
+                    <a class="nav-link" href="{{route('service')}}">{{__('words.IVC Services')}}</a>
                 </li>
                 <li class="nav-item fs-4 ms-5 me-4">
-                    <a style="width: 150px" href="#" class="btn fw-bold fs-4 text-white custom-bg-primary d-flex align-items-center justify-content-center">Contact Us</a>
+                    <a style="width: 150px" href="#" class="btn fw-bold fs-4 text-white custom-bg-primary d-flex align-items-center justify-content-center">{{__('words.Contact Us')}}</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <button class="btn btn-language dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-globe"></i> English
+                <div class="dropdown-center">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        {{ app()->getLocale() == 'en' ? 'English' : 'العربية' }}
                     </button>
-                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                        <li><a class="dropdown-item" href="#">English</a></li>
-                        <li><a class="dropdown-item" href="#">Spanish</a></li>
+                    <ul class="dropdown-menu">
+                        <form id="language-form" method="POST" action="{{ route('language') }}">
+                            @csrf
+                            <input type="hidden" name="locale" id="locale" value="{{ app()->getLocale() }}">
+                        </form>
+                        <li>
+                            <a class="dropdown-item" href="#" onclick="event.preventDefault(); document.getElementById('locale').value = 'en'; document.getElementById('language-form').submit();">
+                                English
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" onclick="event.preventDefault(); document.getElementById('locale').value = 'ar'; document.getElementById('language-form').submit();">
+                                العربية
+                            </a>
+                        </li>
                     </ul>
-                </li>
+                </div>
+
             </ul>
         </div>
     </div>
