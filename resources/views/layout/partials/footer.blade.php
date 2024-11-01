@@ -22,7 +22,7 @@
             <a href="mailto:support@ivc-ye.com" class="text-decoration-underline text-black fs-3">
                 <img src="{{asset('assets/images/mail.png')}}" alt="">support@ivc-ye.com
             </a>
-            <p>{{__('words.Copyright')}} &copy; {{date('Y')}} IVC | {{__('words.Powered by WarqaTech')}}</p>
+            <p>{{__('Copyright')}} &copy; {{date('Y')}} IVC | {{__('Powered by WarqaTech')}}</p>
         </div>
     </section>
 </footer>

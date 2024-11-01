@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg p-5">
     <div class="container-fluid">
-        <a class="navbar-brand mx-2" href="#">
+        <a class="navbar-brand mx-2" href="{{route('home')}}">
             <img src="{{asset('assets/images/logo.png')}}" alt="Logo" width="200">
         </a>
         <div style="height: 80px" class="border-black border-start">
