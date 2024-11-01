@@ -38,6 +38,29 @@ background-image: url("../../public/assets/images/background.png");
 .me-7{
    margin-right:17rem;
 }
+.owl-nav button.owl-prev span, .owl-nav button.owl-next span{
+    width: 50px;  /* Set the desired width */
+    height: 50px; /* Set the desired height */
+    font-size: 50px; /* Adjust font size if you have icons or text */
+    color: white;
+    display: flex; /* Center content */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+.owl-nav{
+    left: 49%;
+    display: flex;
+     position: absolute;
+    top: 45%;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+    width: 115%;
+    justify-content: space-between;
+}
+
+.owl-item .active{
+    width: fit-content!important;
+}
 .nav-border{
     width: 90%;
 }

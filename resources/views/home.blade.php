@@ -54,67 +54,61 @@
         <section class="ms-5" style="margin-top: 150px">
             <h1 class="custom-primary fw-bold mb-5">{{__('words.IVC Previous Work')}}</h1>
             <hr>
-            <div class="owl-carousel owl-theme">
-                @foreach($previousWork as $work)
-                    <div class="item">
-                        <div class="card">
-                            <div class="card-body">
-                                <img height="300" src="{{asset('storage'.'/'.$work->path)}}" alt="">
+            <div class="row">
+                <div class="col-lg-8 m-auto py-5 rounded-5" style="background-color: #1075B9; padding-inline: 83px">
+                    <div class="owl-carousel owl-theme work-carousel">
+                        @foreach($previousWork as $work)
+                            <div class="item" style="width: fit-content">
+                                <img style="height: 330px; width: 420px" class="rounded-3" src="{{asset('storage'.'/'.$work->path)}}" alt="">
                             </div>
-                        </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="ms-5" style="margin-top: 150px">
+            <h1 class="custom-primary fw-bold mb-5">{{__('words.IVC Clients')}}</h1>
+            <hr>
+            <div class="row">
+            <div class="col-lg-8 m-auto">
+            <div class="owl-carousel owl-theme clients-carousel">
+                @foreach($clients as $client)
+                    <div class="item">
+                        <img style="width: 170px;height: 150px" class="rounded-circle" src="{{asset('storage'.'/'.$client->image)}}" alt="">
                     </div>
                 @endforeach
             </div>
-        </section>
-        <section>
-            <h1 class="custom-primary fw-bold mb-5">IVC Clients</h1>
-            <hr>
+                </div>
+            </div>
         </section>
     </section>
+    </section>
+@endsection
+@push('script')
     <script>
         $(document).ready(function(){
-            $('.owl-carousel').owlCarousel({
+            $('.work-carousel').owlCarousel({
                 loop: true,
                 nav: true,
-                dots:true,
-                rtl: true,
-                margin:10,
+                dots: false,
+                margin: 20,
                 responsive: {
-                    //X-Small
-                    0: {
-                        items: 3
-                    },
-                    360: {
-                        items: 3
-                    },
-                    375: {
-                        items: 3
-                    },
-                    540: {
-                        items: 3
-                    },
+                    0: { items: 1 }, // For smaller screens
+                    768: { items: 2 } // Display 2 images at a time for larger screens
+                }
+            });
 
-                    576: {
-                        items: 3
-                    },
-
-                    768: {
-                        items: 3
-                    },
-                    //Large
-                    992: {
-                        items: 3
-                    },
-                    //Extra large
-                    1200: {
-                        items: 3
-                    },
-                    //Extra extra large
-                    1400: {
-                        items: 3
-                    }
+            $('.clients-carousel').owlCarousel({
+                loop: true,
+                nav: true,
+                dots: true,
+                margin: 10,
+                responsive: {
+                    0: { items: 1 }, // For smaller screens
+                    768: { items: 5 } // Display 5 images at a time for larger screens
                 }
             });
         });
     </script>
-@endsection
+@endpush

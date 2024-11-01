@@ -37,9 +37,10 @@ class WorkResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('title'),
-                ImageColumn::make('path')
+                ImageColumn::make('path')->size(70)
                     ->label('image')
-                    ->size(50)
+                    ->size(50),
+                Tables\Columns\ToggleColumn::make('status')
 
             ])
             ->filters([

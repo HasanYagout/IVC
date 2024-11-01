@@ -6,9 +6,12 @@ use App\Filament\Resources\ClientsResource\Pages;
 use App\Filament\Resources\ClientsResource\RelationManagers;
 use App\Models\Clients;
 use Filament\Forms;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -23,15 +26,24 @@ class ClientsResource extends Resource
     {
         return $form
             ->schema([
-                //
+                TextInput::make('title')->label('name'),
+                Forms\Components\FileUpload::make('image')
+                    ->directory('clients')
+                    ->disk('public')
+                    ->label('image'),
+                Forms\Components\Toggle::make('status')
             ]);
     }
+
 
     public static function table(Table $table): Table
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('title'),
+                ImageColumn::make('image')->size(70),
+                Tables\Columns\ToggleColumn::make('status')
+
             ])
             ->filters([
                 //
@@ -49,7 +61,7 @@ class ClientsResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+
         ];
     }
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Clients;
 use App\Models\Work;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
@@ -11,6 +12,7 @@ class HomeController extends Controller
     public function index()
     {
         $data['previousWork']=Work::all();
+        $data['clients']=Clients::all();
         return view('home',$data);
     }
 

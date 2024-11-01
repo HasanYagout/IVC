@@ -12,10 +12,10 @@
     <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
-<body>
+<body >
 @include('layout.partials.nav')
 @yield('content')
 @include('layout.partials.footer')
-@stack('css_or_js')
+@stack('script')
 </body>
 </html>
