@@ -70,8 +70,8 @@
         <section class="ms-5" style="margin-top: 150px">
             <h1 class="custom-primary fw-bold mb-5">{{__('words.IVC Clients')}}</h1>
             <hr>
-            <div class="row">
-            <div class="col-lg-8 m-auto">
+            <div class="row my-5 py-5">
+            <div class="col-lg-8 m-auto ">
             <div class="owl-carousel owl-theme clients-carousel">
                 @foreach($clients as $client)
                     <div class="item">
@@ -92,6 +92,7 @@
                 loop: true,
                 nav: true,
                 dots: false,
+                {{app()->getLocale()=='ar'?'rtl:true,':''}}
                 margin: 20,
                 responsive: {
                     0: { items: 1 }, // For smaller screens
@@ -102,7 +103,8 @@
             $('.clients-carousel').owlCarousel({
                 loop: true,
                 nav: true,
-                dots: true,
+                dots: false,
+                {{app()->getLocale()=='ar'?'rtl:true,':''}}
                 margin: 10,
                 responsive: {
                     0: { items: 1 }, // For smaller screens
