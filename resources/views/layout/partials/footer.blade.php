@@ -1,6 +1,6 @@
 <footer class="bg-white mt-5 overflow-hidden" style="box-shadow: 0 -2rem 3rem rgba(0, 0, 0, 0.175);">
     <section class="row">
-        <div class="col-lg-4 d-flex p-5 justify-content-between align-items-center">
+        <div class="align-items-center col-lg-6 col-xl-4 d-flex justify-content-between p-5">
             <img src="{{asset('assets/images/logo.png')}}" alt="">
             <section>
                 <ul class="fs-5 list-unstyled">
@@ -13,10 +13,9 @@
         </div>
 
       <div class="align-items-center col-lg-2 d-flex justify-content-center">
-          <div style="height: 130px" class="custom-border-primary border-start">
+          <div style="height: 130px" class="custom-border-primary d-none d-lg-block d-xl-block border-start">
 
           </div>
-
       </div>
         <div class="col-lg-4 d-flex p-5 justify-content-between align-items-center flex-column">
             <a href="mailto:support@ivc-ye.com" class="text-decoration-underline text-black fs-3">

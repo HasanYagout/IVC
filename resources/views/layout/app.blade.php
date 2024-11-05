@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
 
-    <link rel="icon" type="image/x-icon" href="">
+    <link rel="icon"  type="image/x-icon" href="{{asset('assets/images/logo.ico')}}">
     <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/owl.theme.default.min.css') }}">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>

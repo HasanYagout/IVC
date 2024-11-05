@@ -21,10 +21,33 @@
 }
 
 body{
+
 background-image: url("../../public/assets/images/background.png");
     background-size: cover;
     background-repeat: repeat-y;
 }
+#responsive_padding{
+    padding: 7rem;
+}
+#work_carousel_img{
+    height: 330px;
+    width: 420px;
+}
+#clients_carousel_img{
+    width: 170px;
+    height: 150px;
+}
+
+
+
+#work_carousel{
+    padding-inline: 83px;
+}
+#responsive_margin{
+    margin: 7rem;
+}
+
+
 
 .logo::after {
     content: '';
@@ -85,4 +108,24 @@ background-image: url("../../public/assets/images/background.png");
 }
 .nav-border{
     width: 90%;
+}
+@media screen and (max-width: 600px){
+    #responsive_padding{
+        padding: 3rem;
+    }
+    #work_carousel{
+        padding-inline: 0;
+    }
+    #work_carousel_img{
+        height: 230px;
+        width: 320px;
+    }
+
+}
+@media screen and (min-width: 600px){
+    .clients-carousel .owl-nav {
+        width: 126%;
+
+    }
+
 }
