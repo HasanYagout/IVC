@@ -1,8 +1,9 @@
 @extends('layout.app')
 @section('content')
+
     <h1 class="custom-primary text-center fw-bold mb-5">{{ __('words.IVC Services') }}</h1>
-    <div class="row justify-content-center">
-        <div class="bg-white shadow-lg col-lg-5 px-4 py-5 rounded rounded-5">
+    <div class="row justify-content-center mx-2">
+        <div class="bg-white shadow-lg col-xl-5 col-lg-7 col-sm-7 col-7 px-4 py-5 rounded rounded-5">
                 <section>
                     <h1 class="custom-primary">{{ __('words.Business Advisory') }}</h1>
                     <p class="custom-primary fs-5">{{ __('words.Inspiring Vision for Consulting (IVC) is providing a range of consulting services that enhance business performance and needs.') }}</p>
@@ -47,8 +48,8 @@
                 </section>
         </div>
     </div>
-    <div class="row justify-content-center mt-5">
-        <div class="bg-white shadow-lg col-lg-5 px-4 py-5 rounded rounded-5">
+    <div class="row justify-content-center mx-2 mt-5">
+        <div class="bg-white shadow-lg col-xl-5 col-lg-7 col-sm-7 col-7 px-4 py-5 rounded rounded-5">
             <section>
                 <h1 class="custom-primary">{{ __('words.Capacity Building') }}</h1>
                 <p class="custom-primary fs-5">{{ __('words.IVC capacity building is on demand service and cover the following:') }}</p>
@@ -63,8 +64,8 @@
             </section>
         </div>
     </div>
-    <div class="row justify-content-center mt-5">
-        <div class="bg-white shadow-lg col-lg-5 px-4 py-5 rounded rounded-5">
+    <div class="row justify-content-center mx-2 mt-5">
+        <div class="bg-white shadow-lg col-xl-5 col-lg-7 col-sm-7 col-7 px-4 py-5 rounded rounded-5">
             <section>
                 <h1 class="custom-primary">{{ __('words.Humanitarian & Development Advisory') }}</h1>
                 <p class="custom-primary fs-5">{{ __('words.IVC team has a field record on providing professional services to humanitarian and development programs and projects, that includes:') }}</p>
