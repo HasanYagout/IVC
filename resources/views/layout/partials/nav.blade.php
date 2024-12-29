@@ -23,7 +23,7 @@
         </button>
 
         <!-- Collapsible Navbar Content -->
-        <div class="collapse navbar-collapse justify-content-lg-end" id="navbarContent">
+        <div class="collapse navbar-collapse mt-3 justify-content-lg-end" id="navbarContent">
             <ul class="navbar-nav align-items-center bg-white d-flex  gap-2 gap-lg-3 mb-2 mb-lg-0 py-2 px-3 px-lg-5 rounded-5 shadow-sm">
                 <!-- Home Link -->
                 <li class="nav-item fs-6 fs-lg-4 fw-bold mx-3 mx-lg-3">
@@ -38,8 +38,8 @@
                     <a class="nav-link" href="{{route('service')}}">{{__('words.IVC Services')}}</a>
                 </li>
                 <!-- Contact Us Button -->
-                <li class="nav-item mx-3 mx-lg-3">
-                    <a href="#" class="btn fw-bold fs-6 fs-lg-4 text-white custom-bg-primary d-flex align-items-center justify-content-center">
+                <li class="nav-item mx-3 mx-lg-3 mb-2">
+                    <a href="tel:+1234567890" class="btn fw-bold fs-6 fs-lg-4 text-white custom-bg-primary d-flex align-items-center justify-content-center">
                         {{__('words.Contact Us')}}
                     </a>
                 </li>

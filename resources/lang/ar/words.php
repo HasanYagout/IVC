@@ -73,5 +73,8 @@ return [
     "YEMEN-SANA'A" => 'اليمن - صنعاء',
     "Copyright" => 'حقوق الطبع والنشر',
     "Powered by WarqaTech" => 'شغل بواسطة ورقة تيك',
+    "IVC capacity building is on demand service and cover the following:"=>'بناء القدرات في IVC هو خدمة حسب الطلب ويشمل ما يلي:',
+    "IVC team has a field record on providing professional services to humanitarian and development programs and projects, that includes:"=>'يمتلك فريق IVC سجلاً حافلاً في تقديم خدمات مهنية للبرامج والمشاريع الإنسانية والإنمائية، بما في ذلك:'
+
 
 ];

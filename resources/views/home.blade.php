@@ -8,8 +8,8 @@
                         <div class="col-xl-6 col-lg-12 col-sm-12 flex-grow-1">
                             <h1 class="custom-primary fw-bold mb-5">{{__('words.Inspiring Vision for Consulting')}}</h1>
                             <p class="fs-3 fw-bold">{{__('words.A group of entrepreneurs and professionals with diverse expertise across public and private sectors. With decades of experience, they provide consulting and advisory services to public entities, industries, NGOs, INGOs, and UN agencies, focusing on development and humanitarian actions.')}}</p>
-                            <button style="width: 130px" class="border-0 custom-bg-primary fw-bold p-2 rounded text-white">
-                                {{__('words.Contact Us')}}</button>
+                            <a href="tel:+1234567890" class="border-0 col-xl-2 col-sm-3 custom-bg-primary fs-4 fw-bold p-2 rounded text-center text-decoration-none text-white">
+                                {{__('words.Contact Us')}}</a>
                         </div>
                         <div class="col-xl-6 col-lg-12 c0l-sm-12 flex-grow-1">
                             <img class=" w-100" src="{{asset('assets/images/hero_section_image.png')}}" alt="">
@@ -17,43 +17,44 @@
                     </div>
                 </section>
             </div>
-            <div class="col-lg-11">
+            <div class=" col-sm-11">
                 <section style="margin-top: 150px">
                     <h1 class="custom-primary fw-bold mb-5">{{ __('words.About IVC') }}</h1>
-                    <div class="row gap-5 justify-content-center">
-                        <div class="col-xl-3 col-lg-4 d-flex align-items-stretch px-4">
+                    <div class="row ">
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-3 d-flex align-items-stretch px-2">
                             <x-box title="{{ __('words.IVC Vision') }}" description="{{ __('words.The vision of Inspiring Vision for Consulting is to have a world class.') }}"></x-box>
                         </div>
-                        <div class="col-xl-3 col-lg-4 d-flex align-items-stretch px-4">
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-3 d-flex align-items-stretch px-2">
                             <x-box title="{{ __('words.IVC Mission') }}" description="{{__('words.Our mission is to be innovative and providing high quality services that exceed our clients expectations')}}"></x-box>
                         </div>
-                        <div class="col-xl-3 col-lg-4 d-flex align-items-stretch px-4">
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-3 d-flex align-items-stretch px-2">
                             <x-box title="{{__('words.IVC Value')}}" description="{{__('words.Provide and apply the concept of the fair value for Our Clients and Our Team')}}"></x-box>
                         </div>
-                        <div style="width: 80%" class="d-flex justify-content-end">
-                            <button style="width: 150px" class="border-0 fs-4 custom-bg-primary fw-bold p-2 rounded text-white">
-                                {{__('words.Read More')}}</button>
+                        <div class="w-100 row ms-0">
+                            <a href="{{route('about')}}" class="border-0 col-xl-2 col-sm-3 custom-bg-primary fs-4 fw-bold p-2 rounded text-center text-decoration-none text-white">
+                                {{__('words.Read More')}}
+                            </a>
                         </div>
                     </div>
-
                 </section>
-
             </div>
+
+
             <div class="col-lg-11">
                 <section style="margin-top: 150px">
                     <h1 class="custom-primary fw-bold mb-5">{{__('words.IVC Services')}}</h1>
                     <div class="row gap-5 justify-content-center">
 
-                        <div class="col-lg-10 border flex-column border-3 custom-border-primary px-4 py-5 rounded-5 d-flex align-items-stretch" style="box-shadow: inset 0 0 10px rgba(128, 128, 128, 0.7);">
+                        <div class="col-lg-12 border flex-column border-3 custom-border-primary px-4 py-5 rounded-5 d-flex align-items-stretch" style="box-shadow: inset 0 0 10px rgba(128, 128, 128, 0.7);">
                             <h3 class="fw-bold">{{__('words.Business Advisory')}}</h3>
                             <p class="fs-5">{{__('words.Inspiring Vision for Consulting (IVC) is providing a range of consulting services that enhance business performance and needs.')}}</p>
                             <h3 class="fw-bold">{{__('words.Humanitarian & Development Advisory')}}</h3>
                             <p class="fs-5">{{__('words.IVC team has a field record on providing professional services to humanitarian and development programs and projects.')}}</p>
                             <h3 class="fw-bold">{{__('words.Capacity Building')}}</h3>
                             <p class="fs-5">{{__('words.IVC capacity building is on demand service and cover')}}</p>
-                            <div style="width: 95%" class="d-flex justify-content-end">
-                                <button style="width: 150px" class="border-0 fs-4 custom-bg-primary fw-bold p-2 rounded text-white">
-                                    {{__('words.Read More')}}</button>
+                            <div class="w-100 row ms-0">
+                                <a href="{{route('service')}}" class="border-0 col-xl-2 col-sm-3 custom-bg-primary fs-4 fw-bold p-2 rounded text-center text-decoration-none text-white">
+                                    {{__('words.Read More')}}</a>
                             </div>
                         </div>
                     </div>
@@ -100,7 +101,7 @@
 
 
     </section>
-    </section>
+
 @endsection
 @push('script')
     <script>
